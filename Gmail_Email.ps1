@@ -1,4 +1,5 @@
-function Send-ToEmail([string]$email, [string]$attachmentpath, [string]$Username, [string]$Password){$message = new-object Net.Mail.MailMessage;
+function Send-ToEmail([string]$email, [string]$attachmentpath, [string]$Username, [string]$Password){
+    $message = new-object Net.Mail.MailMessage;
     $message.From = $email;
     $message.To.Add($email);
     $message.Subject = "Logs from " + $env:USERNAME;
